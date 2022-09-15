@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "kevin-lang-ek_eJTrK8BY-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "kevin-lang-ek_eJTrK8BY-unsplash-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "kevin-lang-ek_eJTrK8BY-unsplash-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

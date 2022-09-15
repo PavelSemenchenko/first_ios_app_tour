@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pizza-pizza-filled-with-tomatoes-salami-and-olives_140725-1200.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pizza-pizza-filled-with-tomatoes-salami-and-olives_140725-1201.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pizza-pizza-filled-with-tomatoes-salami-and-olives_140725-1202.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
