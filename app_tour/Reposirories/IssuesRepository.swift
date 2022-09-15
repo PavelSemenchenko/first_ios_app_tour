@@ -24,7 +24,7 @@ struct NewIssue : Codable {
 class IssuesRepository {
     
     let headers: HTTPHeaders = [
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer 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",
     ]
     
     
