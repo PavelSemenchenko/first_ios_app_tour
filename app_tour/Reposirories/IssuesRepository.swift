@@ -20,11 +20,14 @@ struct NewIssue : Codable {
     let body: String
 }
 
+struct CloseIssue : Codable {
+    let state: String
+}
 
 class IssuesRepository {
     
     let headers: HTTPHeaders = [
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer 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",
     ]
     
     
@@ -51,5 +54,13 @@ class IssuesRepository {
             completion(issuesResponse.value!)
             
         }
+    }
+    
+    // Try to clode issue
+    func close(state: String, completion: @escaping (Issue) -> Void) {
+        let closeIssue = CloseIssue(state: state)
+        
+        let request = AF.request("https://api.github.com/repos/PavelSemenchenko/first_ios_app_tour/issues/1",
+                                 method: .patch)
     }
 }
