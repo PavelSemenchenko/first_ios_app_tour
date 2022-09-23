@@ -13,6 +13,11 @@ class IssueCell: UITableViewCell {
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var creatorLabel: UILabel!
     
+    
+    @IBAction func closeIssueButton(_ sender: Any) {
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
