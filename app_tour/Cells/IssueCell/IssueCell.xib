@@ -16,17 +16,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="467" height="223"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-i5-4Hj">
-                        <rect key="frame" x="309" y="38" width="150" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xN-KK-ROd">
+                        <rect key="frame" x="23.5" y="8" width="420" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="9Tl-kw-3Me"/>
-                            <constraint firstAttribute="height" constant="20" id="cRu-3v-NOA"/>
+                            <constraint firstAttribute="height" constant="20" id="B6m-NR-nYw"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="node_id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-xn-J0q">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-xn-J0q">
                         <rect key="frame" x="8" y="38" width="150" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="ZiM-Uc-vzy"/>
@@ -36,21 +35,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xN-KK-ROd">
-                        <rect key="frame" x="23.333333333333343" y="8" width="420.33333333333326" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-i5-4Hj">
+                        <rect key="frame" x="309" y="38" width="150" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="B6m-NR-nYw"/>
+                            <constraint firstAttribute="width" constant="150" id="9Tl-kw-3Me"/>
+                            <constraint firstAttribute="height" constant="20" id="cRu-3v-NOA"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-F6-y8Q">
-                        <rect key="frame" x="354" y="8" width="108" height="35"/>
+                        <rect key="frame" x="414" y="8" width="48" height="34"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled" title="close issue"/>
+                        <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system"/>
                         <connections>
-                            <action selector="deleteCellButton:" destination="bB6-vE-nJy" eventType="touchUpInside" id="LKZ-s7-0Sn"/>
+                            <action selector="deleteCellButton:" destination="bB6-vE-nJy" eventType="touchUpInside" id="1jW-ay-WHo"/>
                         </connections>
                     </button>
                 </subviews>
@@ -68,12 +68,14 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="closeIssueButton" destination="cfg-F6-y8Q" id="7pw-E3-u82"/>
-                <outlet property="creatorLabel" destination="gMY-i5-4Hj" id="I5O-XO-B5E"/>
-                <outlet property="stateLabel" destination="2xN-KK-ROd" id="Mu8-yt-Zs3"/>
-                <outlet property="urlLabel" destination="gRJ-xn-J0q" id="GrJ-Sb-irm"/>
+                <outlet property="numberButtonCell" destination="gRJ-xn-J0q" id="c1c-zS-Qfh"/>
+                <outlet property="titleButtonCell" destination="2xN-KK-ROd" id="OG7-g9-cYB"/>
+                <outlet property="userButtonCell" destination="gMY-i5-4Hj" id="fD0-fW-fKc"/>
             </connections>
             <point key="canvasLocation" x="-76.08695652173914" y="-62.611607142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="trash" catalog="system" width="117" height="128"/>
+    </resources>
 </document>

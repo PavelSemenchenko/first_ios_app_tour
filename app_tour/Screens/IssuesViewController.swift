@@ -32,10 +32,14 @@ class IssuesViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func newIssueButtonClicked(_ sender: Any) {
-       let vc = storyboard?.instantiateViewController(withIdentifier: "newIssueStoryboardId") as! NewIssueViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "newIssueStoryboardId") as! NewIssueViewController
        
-       navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.pushViewController(controller, animated: false)
        
+    }
+    
+    @IBAction func refreshButton(_ sender: Any) {
+        getIssues()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,8 +47,7 @@ class IssuesViewController: UIViewController, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: indexPath) as! IssueCell
-                
-        
+        cell.data = issues[indexPath.row]
         
         cell.issuesRepository = issuesRepository
         

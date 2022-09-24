@@ -64,8 +64,8 @@ class IssuesRepository {
         }
     }
     
-    // clode issue
-    func delete(nubmer: Int, completion: @escaping (Issue) -> Void) {
+    // close issue
+    func delete(number: Int, completion: @escaping (Issue) -> Void) {
         
         let deteleteIssue = CloseIssue(state: "close")
         

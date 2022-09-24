@@ -41,7 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="upd"/>
                                 <connections>
-                                    <segue destination="rwY-MA-FOe" kind="show" id="80S-DP-bea"/>
+                                    <action selector="refreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tm7-DX-Nzq"/>
                                 </connections>
                             </button>
                         </subviews>
