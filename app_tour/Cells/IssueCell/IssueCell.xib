@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xN-KK-ROd">
-                        <rect key="frame" x="23.5" y="8" width="420" height="20"/>
+                        <rect key="frame" x="23.333333333333343" y="8" width="420.33333333333326" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="B6m-NR-nYw"/>
                         </constraints>
@@ -45,6 +45,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-F6-y8Q">
+                        <rect key="frame" x="354" y="8" width="108" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="close issue"/>
+                        <connections>
+                            <action selector="deleteCellButton:" destination="bB6-vE-nJy" eventType="touchUpInside" id="LKZ-s7-0Sn"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -54,10 +62,13 @@
                     <constraint firstItem="gRJ-xn-J0q" firstAttribute="leading" secondItem="R1Y-pO-bYU" secondAttribute="leading" constant="8" id="Nee-32-70r"/>
                     <constraint firstItem="gRJ-xn-J0q" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" constant="30" id="Ref-uN-MVC"/>
                     <constraint firstItem="2xN-KK-ROd" firstAttribute="width" secondItem="R1Y-pO-bYU" secondAttribute="width" multiplier="0.9" id="Ta9-u0-skZ"/>
+                    <constraint firstItem="cfg-F6-y8Q" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" id="cE8-s6-Yei"/>
+                    <constraint firstAttribute="trailing" secondItem="cfg-F6-y8Q" secondAttribute="trailing" constant="5" id="qnG-Eo-dMu"/>
                     <constraint firstItem="2xN-KK-ROd" firstAttribute="centerX" secondItem="R1Y-pO-bYU" secondAttribute="centerX" id="xvU-7Y-DIQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="closeIssueButton" destination="cfg-F6-y8Q" id="7pw-E3-u82"/>
                 <outlet property="creatorLabel" destination="gMY-i5-4Hj" id="I5O-XO-B5E"/>
                 <outlet property="stateLabel" destination="2xN-KK-ROd" id="Mu8-yt-Zs3"/>
                 <outlet property="urlLabel" destination="gRJ-xn-J0q" id="GrJ-Sb-irm"/>

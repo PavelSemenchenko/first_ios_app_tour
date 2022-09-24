@@ -8,10 +8,18 @@
 import Foundation
 import Alamofire
 
+struct User: Codable {
+    let login: String
+    let id: Int
+    let url: String
+}
+
 struct Issue : Codable {
     let title: String
     let node_id: String
     let state: String
+    let number: Int
+    let user: User
     
 }
 
@@ -33,7 +41,7 @@ class IssuesRepository {
     
     func loadAll(completion: @escaping ([Issue]) -> Void) {
         
-        
+        // get
         let request = AF.request("https://api.github.com/repos/PavelSemenchenko/first_ios_app_tour/issues", headers: headers)
         request.responseDecodable(of: [Issue].self) {issuesResponse in
             completion(issuesResponse.value ?? [])
@@ -42,7 +50,7 @@ class IssuesRepository {
     }
     
     func create(title: String, body: String, completion: @escaping (Issue) -> Void) {
-        //POST
+        // post
         let newIssue = NewIssue(title: title, body: body)
         
         let request = AF.request("https://api.github.com/repos/PavelSemenchenko/first_ios_app_tour/issues",
@@ -56,11 +64,18 @@ class IssuesRepository {
         }
     }
     
-    // Try to clode issue
-    func close(state: String, completion: @escaping (Issue) -> Void) {
-        let closeIssue = CloseIssue(state: state)
+    // clode issue
+    func delete(nubmer: Int, completion: @escaping (Issue) -> Void) {
         
-        let request = AF.request("https://api.github.com/repos/PavelSemenchenko/first_ios_app_tour/issues/1",
-                                 method: .patch)
+        let deteleteIssue = CloseIssue(state: "close")
+        
+        let request = AF.request("https://api.github.com/repos/PavelSemenchenko/first_ios_app_tour/issues/\(number)",
+                                 method: .patch,
+                                 parameters: deteleteIssue,
+                                 headers: headers)
+        
+        request.responseDecodable(of: Issue.self) { issuesResponse in
+            completion(issuesResponse.value!)
+        }
     }
 }

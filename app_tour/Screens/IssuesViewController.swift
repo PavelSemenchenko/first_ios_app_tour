@@ -8,28 +8,28 @@
 import UIKit
 
 class IssuesViewController: UIViewController, UITableViewDataSource {
+        
+    @IBOutlet weak var issuesTable: UITableView!
     
-      
     let issuesRepository = IssuesRepository()
     var issues: [Issue] = []
     
-    @IBOutlet weak var issuesTable: UITableView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        issuesTable.dataSource = self
         let cellNib = UINib(nibName: "IssueCell", bundle: nil)
+        issuesTable.dataSource = self
         issuesTable.register(cellNib, forCellReuseIdentifier: "issueCell")
         
+        getIssues()
+       
+    }
+   
+    func getIssues() {
         issuesRepository.loadAll { allIssues in
             self.issues = allIssues
             self.issuesTable.reloadData()
-       }
-        
+        }
     }
-   
-    
     
     @IBAction func newIssueButtonClicked(_ sender: Any) {
        let vc = storyboard?.instantiateViewController(withIdentifier: "newIssueStoryboardId") as! NewIssueViewController
@@ -44,9 +44,9 @@ class IssuesViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: indexPath) as! IssueCell
                 
-        cell.stateLabel.text = issues[indexPath.row].title
-        cell.urlLabel.text = issues[indexPath.row].node_id
-        cell.creatorLabel.text = issues[indexPath.row].state
+        
+        
+        cell.issuesRepository = issuesRepository
         
         return cell
     }
