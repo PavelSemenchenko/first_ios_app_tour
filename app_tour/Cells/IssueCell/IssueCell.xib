@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-xn-J0q">
-                        <rect key="frame" x="8" y="38" width="150" height="20"/>
+                        <rect key="frame" x="8" y="48" width="150" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="ZiM-Uc-vzy"/>
                             <constraint firstAttribute="height" constant="20" id="ytl-uu-QAh"/>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-i5-4Hj">
-                        <rect key="frame" x="309" y="38" width="150" height="20"/>
+                        <rect key="frame" x="309" y="48" width="150" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="9Tl-kw-3Me"/>
                             <constraint firstAttribute="height" constant="20" id="cRu-3v-NOA"/>
@@ -58,9 +58,9 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="gMY-i5-4Hj" secondAttribute="trailing" constant="8" id="1qY-Ff-sxW"/>
                     <constraint firstItem="2xN-KK-ROd" firstAttribute="top" secondItem="R1Y-pO-bYU" secondAttribute="top" constant="8" id="F9d-o7-J9k"/>
-                    <constraint firstItem="gMY-i5-4Hj" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" constant="30" id="Fu3-uu-O0J"/>
+                    <constraint firstItem="gMY-i5-4Hj" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" constant="40" id="Fu3-uu-O0J"/>
                     <constraint firstItem="gRJ-xn-J0q" firstAttribute="leading" secondItem="R1Y-pO-bYU" secondAttribute="leading" constant="8" id="Nee-32-70r"/>
-                    <constraint firstItem="gRJ-xn-J0q" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" constant="30" id="Ref-uN-MVC"/>
+                    <constraint firstItem="gRJ-xn-J0q" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" constant="40" id="Ref-uN-MVC"/>
                     <constraint firstItem="2xN-KK-ROd" firstAttribute="width" secondItem="R1Y-pO-bYU" secondAttribute="width" multiplier="0.9" id="Ta9-u0-skZ"/>
                     <constraint firstItem="cfg-F6-y8Q" firstAttribute="top" secondItem="2xN-KK-ROd" secondAttribute="top" id="cE8-s6-Yei"/>
                     <constraint firstAttribute="trailing" secondItem="cfg-F6-y8Q" secondAttribute="trailing" constant="5" id="qnG-Eo-dMu"/>
