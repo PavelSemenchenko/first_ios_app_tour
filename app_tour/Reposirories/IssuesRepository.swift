@@ -72,6 +72,7 @@ class IssuesRepository {
         let request = AF.request("https://api.github.com/repos/PavelSemenchenko/first_ios_app_tour/issues/\(number)",
                                  method: .patch,
                                  parameters: deteleteIssue,
+                                 encoder: JSONParameterEncoder.default,
                                  headers: headers)
         
         request.responseDecodable(of: Issue.self) { issuesResponse in
