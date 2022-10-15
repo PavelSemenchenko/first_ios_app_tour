@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import AlamofireImage
+import UIKit
 
 struct Profile: Codable {
     let title: String

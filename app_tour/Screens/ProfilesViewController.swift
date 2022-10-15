@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfilesViewController: UICollectionViewController {
+class ProfilesViewController: UICollectionViewController, UICollectionViewDelegate {
     
     let profilesRepository = ProfilesRepository()
     var profiles: [Profile] = []
@@ -25,6 +25,21 @@ class ProfilesViewController: UICollectionViewController {
         profilesRepository.loadAll { allProfiles in
             self.profiles = allProfiles
             self.collectionView.reloadData()
+        }
+    }
+    extension ProfilesViewController {
+        override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return datasource.count
+        }
+        
+        override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseID,
+                                                                for: indexPath) as? CollectionViewCell else {
+                fatalError("Wrong cell")
+            }
+            let fruit = datasource[indexPath.item]
+            cell.update(title: fruit.name, image: fruit.icon)
+            return cell
         }
     }
 }

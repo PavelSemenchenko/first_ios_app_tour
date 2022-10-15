@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1C37D128FB543C0051073D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C37CF28FB543C0051073D /* CollectionViewCell.swift */; };
+		2A1C37D228FB543C0051073D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1C37D028FB543C0051073D /* CollectionViewCell.xib */; };
 		2A25D99328D25D1F00DBAC06 /* NewIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25D99228D25D1F00DBAC06 /* NewIssueViewController.swift */; };
 		2A4B716128B3F7CE0069FC80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B716028B3F7CE0069FC80 /* AppDelegate.swift */; };
 		2A4B716328B3F7CE0069FC80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B716228B3F7CE0069FC80 /* SceneDelegate.swift */; };
@@ -17,7 +19,6 @@
 		2A4B717828B3F7CF0069FC80 /* app_tourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B717728B3F7CF0069FC80 /* app_tourTests.swift */; };
 		2A4B718228B3F7CF0069FC80 /* app_tourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B718128B3F7CF0069FC80 /* app_tourUITests.swift */; };
 		2A4B718428B3F7CF0069FC80 /* app_tourUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4B718328B3F7CF0069FC80 /* app_tourUITestsLaunchTests.swift */; };
-		2A55C8CA28F9F230007D0245 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55C8C928F9F230007D0245 /* CollectionViewCell.swift */; };
 		2A55C8CC28F9F274007D0245 /* ProfilesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55C8CB28F9F274007D0245 /* ProfilesRepository.swift */; };
 		2A55C8CF28F9F2B0007D0245 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A55C8CE28F9F2B0007D0245 /* AlamofireImage */; };
 		2A55C8D128F9F392007D0245 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55C8D028F9F392007D0245 /* ProfilesViewController.swift */; };
@@ -48,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		021A02E4D3665AA323CD0DAC /* Pods-app_tourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app_tourTests.release.xcconfig"; path = "Target Support Files/Pods-app_tourTests/Pods-app_tourTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A1C37CF28FB543C0051073D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2A1C37D028FB543C0051073D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		2A25D99228D25D1F00DBAC06 /* NewIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIssueViewController.swift; sourceTree = "<group>"; };
 		2A4B715D28B3F7CE0069FC80 /* app_tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app_tour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4B716028B3F7CE0069FC80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		2A4B717D28B3F7CF0069FC80 /* app_tourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_tourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4B718128B3F7CF0069FC80 /* app_tourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_tourUITests.swift; sourceTree = "<group>"; };
 		2A4B718328B3F7CF0069FC80 /* app_tourUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_tourUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2A55C8C928F9F230007D0245 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2A55C8CB28F9F274007D0245 /* ProfilesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesRepository.swift; sourceTree = "<group>"; };
 		2A55C8D028F9F392007D0245 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		2AA4B88B28CE292600B29B9A /* IssueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
@@ -120,6 +122,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2A1C37D328FB54410051073D /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A1C37D028FB543C0051073D /* CollectionViewCell.xib */,
+				2A1C37CF28FB543C0051073D /* CollectionViewCell.swift */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 		2A2EC82828D10F6E001576A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +144,7 @@
 		2A2EC82928D10F80001576A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2A55C8C928F9F230007D0245 /* CollectionViewCell.swift */,
+				2A1C37D328FB54410051073D /* CollectionCell */,
 				2AA4B88A28CE287400B29B9A /* IssueCell */,
 			);
 			path = Cells;
@@ -341,6 +352,7 @@
 				2A4B716D28B3F7CF0069FC80 /* LaunchScreen.storyboard in Resources */,
 				2A4B716A28B3F7CF0069FC80 /* Assets.xcassets in Resources */,
 				2A4B716828B3F7CE0069FC80 /* Main.storyboard in Resources */,
+				2A1C37D228FB543C0051073D /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,8 +482,8 @@
 			files = (
 				2AA4B89028CE2C1F00B29B9A /* IssueCell.swift in Sources */,
 				2A25D99328D25D1F00DBAC06 /* NewIssueViewController.swift in Sources */,
+				2A1C37D128FB543C0051073D /* CollectionViewCell.swift in Sources */,
 				2AEAFE7C28D23A9E00EBB0CD /* IssuesRepository.swift in Sources */,
-				2A55C8CA28F9F230007D0245 /* CollectionViewCell.swift in Sources */,
 				2A4B716528B3F7CE0069FC80 /* IssuesViewController.swift in Sources */,
 				2A4B716128B3F7CE0069FC80 /* AppDelegate.swift in Sources */,
 				2A4B716328B3F7CE0069FC80 /* SceneDelegate.swift in Sources */,
