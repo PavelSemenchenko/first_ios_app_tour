@@ -13,7 +13,7 @@ import UIKit
 struct Profile: Codable {
     let title: String
     let url: String
-    let thumbnailUrl: String?
+    let thumbnailUrl: UIImage
 }
 
 class ProfilesRepository {

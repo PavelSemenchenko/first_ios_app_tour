@@ -24,6 +24,18 @@ class CollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 10
         
     }
+    var data: Profile! {
+        didSet {
+            prepareForReuse()
+        }
+    }
+    var profilesRopository: ProfilesRepository!
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        ibLabel.text = "\(data.title)"
+        ibImageView.image = data.thumbnailUrl
+    }
+    
     func update(title: String, image: UIImage) {
         ibImageView.image = image
         ibLabel.text = title
