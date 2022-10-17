@@ -63,7 +63,7 @@
                 <outlet property="profileLabel" destination="Xd8-mr-wjL" id="AZy-Lb-7hc"/>
                 <outlet property="stackView" destination="hPg-fB-OQ5" id="CMV-oR-9Oa"/>
             </connections>
-            <point key="canvasLocation" x="410.76923076923077" y="48.341232227488149"/>
+            <point key="canvasLocation" x="414" y="50"/>
         </collectionViewCell>
     </objects>
     <resources>

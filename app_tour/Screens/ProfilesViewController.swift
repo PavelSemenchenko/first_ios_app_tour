@@ -16,7 +16,7 @@ class ProfilesViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cellNib = UINib(nibName: "profileCell", bundle: nil)
+        let cellNib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -29,11 +29,16 @@ class ProfilesViewController: UICollectionViewController {
             self.profilesCollection.reloadData()
         }
     }
-        
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        profiles.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.data = profiles[indexPath.item]
+        cell.profilesRopository = profilesRepository
+        return cell
     }
+    
+    
 }

@@ -29,11 +29,11 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     var profilesRopository: ProfilesRepository!
-    
+    /*
     override func prepareForReuse() {
         super.prepareForReuse()
         profileLabel.text = "\(data.title)"
-        profileImage.image = UIImage(data.thumbnailUrl)
+        profileImage.image = data.thumbnailUrl
         
         
     }
@@ -41,6 +41,6 @@ class CollectionViewCell: UICollectionViewCell {
     func update(title: String, image: UIImage) {
         profileImage.image = image
         profileLabel.text = title
-    }
+    }*/
     
 }

@@ -134,8 +134,8 @@
 		2A2EC82828D10F6E001576A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2A4B716428B3F7CE0069FC80 /* IssuesViewController.swift */,
 				2A25D99228D25D1F00DBAC06 /* NewIssueViewController.swift */,
+				2A4B716428B3F7CE0069FC80 /* IssuesViewController.swift */,
 				2A55C8D028F9F392007D0245 /* ProfilesViewController.swift */,
 			);
 			path = Screens;
