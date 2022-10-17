@@ -48,9 +48,7 @@ class IssuesViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: indexPath) as! IssueCell
         cell.data = issues[indexPath.row]
-        
         cell.issuesRepository = issuesRepository
-        
         return cell
     }
     

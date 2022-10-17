@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 import AlamofireImage
-import UIKit
+import UIKit.UIImage
 
 struct Profile: Codable {
     let title: String
     let url: String
-    let thumbnailUrl: UIImage
+    let thumbnailUrl: String
 }
 
 class ProfilesRepository {
