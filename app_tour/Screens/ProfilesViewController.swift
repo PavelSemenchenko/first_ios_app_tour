@@ -29,6 +29,7 @@ class ProfilesViewController: UICollectionViewController {
         getProfiles()
         
     }
+  
     func getProfiles() {
         profilesRepository.loadAll { allProfiles in
             self.profiles = allProfiles

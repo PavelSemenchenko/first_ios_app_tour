@@ -30,4 +30,10 @@ class CollectionViewCell: UICollectionViewCell {
     var profilesRopository: ProfilesRepository!
        
     
+    
+    
+    
+    
+    
+    
 }
