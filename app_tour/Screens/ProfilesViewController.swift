@@ -36,8 +36,11 @@ class ProfilesViewController: UICollectionViewController {
         return profiles.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell",
-                                                      for: indexPath) as! CollectionViewCell 
+        let rawCell = profilesCollection.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell",
+                                                         for: indexPath)
+        guard let cell = rawCell as? CollectionViewCell else {
+            fatalError("bad story")
+        }
         cell.data = profiles[indexPath.row]
         cell.profilesRopository = profilesRepository
         return cell
