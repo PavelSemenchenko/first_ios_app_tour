@@ -19,8 +19,9 @@ struct Profile: Codable {
 class ProfilesRepository {
     func loadAll(completion: @escaping ([Profile]) -> Void) {
         let request = AF.request("https://jsonplaceholder.typicode.com/photos")
-        request.responseDecodable(of: [Profile].self) {profilesResponse in
-            completion(profilesResponse.value ?? [])
+        request.responseDecodable(of: [Profile].self) {response in
+            completion(response.value ?? [])
+            print(response)
         }
     }
     
