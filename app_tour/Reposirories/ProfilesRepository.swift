@@ -21,7 +21,10 @@ class ProfilesRepository {
         let request = AF.request("https://jsonplaceholder.typicode.com/photos")
         request.responseDecodable(of: [Profile].self) {response in
             completion(response.value ?? [])
+            
+            #if DEBUG
             print(response)
+            #endif
         }
     }
     
