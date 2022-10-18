@@ -10,7 +10,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     static let reuseID = String(describing: CollectionViewCell.self)
     static let nib = UINib(nibName: String(describing: CollectionViewCell.self), bundle: nil)
-          
+    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var profileLabel: UILabel!
@@ -28,12 +28,10 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     var profilesRopository: ProfilesRepository!
-       
     
-    
-    
-    
-    
-    
-    
+    override func prepareForReuse() {
+        profileLabel.text = "\(data.title)"
+        //profileImage.map(<#T##transform: (UIImageView) throws -> U##(UIImageView) throws -> U#>)
+    }
 }
+
