@@ -42,7 +42,7 @@ class ProfilesViewController: UICollectionViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as! CollectionViewCell
-        cell.data = profiles[indexPath.item]
+        cell.data = profiles[indexPath.row]
         cell.profilesRopository = profilesRepository
         return cell
     }

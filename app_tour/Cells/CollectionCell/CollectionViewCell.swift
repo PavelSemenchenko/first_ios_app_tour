@@ -8,30 +8,29 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    static let reuseID = String(describing: CollectionViewCell.self)
-    static let nib = UINib(nibName: String(describing: CollectionViewCell.self), bundle: nil)
     
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var profileLabel: UILabel!
     
-    @IBOutlet weak var stackView: UIStackView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .white
-        
     }
     var data: Profile! {
         didSet {
             prepareForReuse()
         }
     }
-    var profilesRopository: ProfilesRepository!
+    var profilesRopository: ProfilesRepository! // unused -2 remove!
     
     override func prepareForReuse() {
-        profileLabel.text = "\(data.title)"
-        //profileImage.map(<#T##transform: (UIImageView) throws -> U##(UIImageView) throws -> U#>)
+        super.prepareForReuse()
+        profileLabel.text = data.title
+        guard let url = URL(string: data.thumbnailUrl) else {
+            profileImage.image = nil
+            return
+        }
+        profileImage.af.setImage(withURL: url)
     }
 }
 

@@ -8,19 +8,19 @@
 import Foundation
 import Alamofire
 import AlamofireImage
-import UIKit.UIImage
 
 struct Profile: Codable {
     let title: String
-    let url: String
     let thumbnailUrl: String
 }
 
 class ProfilesRepository {
     func loadAll(completion: @escaping ([Profile]) -> Void) {
-        let request = AF.request("https://jsonplaceholder.typicode.com/photos")
+        let urlEndPoint = "https://jsonplaceholder.typicode.com/photos"
+        let request = AF.request(urlEndPoint)
         request.responseDecodable(of: [Profile].self) {response in
-            completion(response.value ?? [])
+            let photos = response.value ?? []
+            completion(photos)
             
             #if DEBUG
             print(response)
