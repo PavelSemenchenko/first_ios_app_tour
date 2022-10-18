@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfilesViewController: UICollectionViewController {
+class ProfilesViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var profilesCollection: UICollectionView!
     
@@ -45,7 +45,11 @@ class ProfilesViewController: UICollectionViewController {
         cell.profilesRopository = profilesRepository
         return cell
     }
-   
-    
+   // size of cell
+    /*
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width/3, height: view.frame.height/6)
+    }
+     */
     
 }
