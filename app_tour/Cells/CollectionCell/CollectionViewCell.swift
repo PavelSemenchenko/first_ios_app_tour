@@ -19,7 +19,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         backgroundColor = .white
         
     }
@@ -29,18 +28,6 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     var profilesRopository: ProfilesRepository!
-    /*
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        profileLabel.text = "\(data.title)"
-        profileImage.image = data.thumbnailUrl
-        
-        
-    }
-    
-    func update(title: String, image: UIImage) {
-        profileImage.image = image
-        profileLabel.text = title
-    }*/
+       
     
 }

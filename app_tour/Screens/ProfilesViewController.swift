@@ -9,7 +9,13 @@ import UIKit
 
 class ProfilesViewController: UICollectionViewController {
     
-    @IBOutlet var profilesCollection: UICollectionView!
+    @IBOutlet var profilesCollection: UICollectionView! {
+        didSet {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
+        }
+    }
     
     let profilesRepository = ProfilesRepository()
     var profiles: [Profile] = []
@@ -34,11 +40,12 @@ class ProfilesViewController: UICollectionViewController {
         profiles.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as! CollectionViewCell
         cell.data = profiles[indexPath.item]
         cell.profilesRopository = profilesRepository
         return cell
     }
+   
     
     
 }
