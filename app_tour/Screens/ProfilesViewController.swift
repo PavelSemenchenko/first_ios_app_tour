@@ -9,13 +9,7 @@ import UIKit
 
 class ProfilesViewController: UICollectionViewController {
     
-    @IBOutlet var profilesCollection: UICollectionView! {
-        didSet {
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
-        }
-    }
+    @IBOutlet var profilesCollection: UICollectionView!
     
     let profilesRepository = ProfilesRepository()
     var profiles: [Profile] = []
@@ -24,7 +18,7 @@ class ProfilesViewController: UICollectionViewController {
         super.viewDidLoad()
         let cellNib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.register(cellNib, forCellWithReuseIdentifier: "CollectionViewCell")
         
         getProfiles()
         
@@ -33,15 +27,17 @@ class ProfilesViewController: UICollectionViewController {
     func getProfiles() {
         profilesRepository.loadAll { allProfiles in
             self.profiles = allProfiles
-            self.profilesCollection.reloadData()
+            self.collectionView.reloadData()
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        profiles.count
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
+        return profiles.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell",
+                                                      for: indexPath) as! CollectionViewCell 
         cell.data = profiles[indexPath.row]
         cell.profilesRopository = profilesRepository
         return cell
