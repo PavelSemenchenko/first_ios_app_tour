@@ -21,7 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
             prepareForReuse()
         }
     }
-    var profilesRopository: ProfilesRepository! // unused -2 remove!
+    var profilesRepository: ProfilesRepository! // unused -2 remove!
     
     override func prepareForReuse() {
         super.prepareForReuse()

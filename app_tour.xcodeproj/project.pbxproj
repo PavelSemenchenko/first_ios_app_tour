@@ -208,8 +208,8 @@
 		2AA4B88A28CE287400B29B9A /* IssueCell */ = {
 			isa = PBXGroup;
 			children = (
-				2AA4B88B28CE292600B29B9A /* IssueCell.xib */,
 				2AA4B88F28CE2C1F00B29B9A /* IssueCell.swift */,
+				2AA4B88B28CE292600B29B9A /* IssueCell.xib */,
 			);
 			path = IssueCell;
 			sourceTree = "<group>";

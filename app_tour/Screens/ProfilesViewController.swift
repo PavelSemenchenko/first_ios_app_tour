@@ -42,7 +42,7 @@ class ProfilesViewController: UICollectionViewController, UICollectionViewDelega
             fatalError("bad story")
         }
         cell.data = profiles[indexPath.row]
-        cell.profilesRopository = profilesRepository
+        cell.profilesRepository = profilesRepository
         return cell
     }
    // size of cell
